@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Image";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Aplicacion Web: Texto y Descripcion de Imagen</h1>
+</div>
+
+
+<form method="post">
+    <hr />
+    <div class="text-center">
+        <input type="text" name="imgRoute" placeholder="Inserte la ruta de la imagen" size="30" />
+    </div>
+    <hr />
+    <div class="text-center">
+        <label>@Html.Raw(ViewBag.imgRoute)</label>
+    </div>
+    <div class="text-center">      
+        <img src="@Html.Raw(ViewBag.imgRoute)" height="150" width="300">
+    </div>
+    <hr />
+    <div class="text-center">
+        <button type="submit" class="btn-group">Enviar imagen</button>
+    </div>
+    <hr />
+    <div style="text-align:center">
+        <label>@Html.Raw(ViewBag.text)</label>
+    </div>
+</form>
+
+
+
